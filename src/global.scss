@@ -1,0 +1,98 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+
+
+ion-content{
+    --background: #0F2027;  /* fallback for old browsers */
+    --background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    --background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.calc-app {
+    ion-input {
+        --color: #fff !important;
+    }
+    .header {
+        background: #fff;
+        color: #000;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 2em;
+        float: left;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        ion-label {
+            width: 100%;
+            font-size: 1.2rem;
+            padding-left: 10px;
+        }
+    }
+    
+    .result-screen {
+        float: left;
+        width: 100%;
+        padding: 10px 10px;
+        text-align: right;
+        height: 85px;
+        span {
+            float: left;
+            width: 100%;
+            color: #fff;
+        }
+        .live-vals {
+            font-size: 1.9rem;
+            padding: 3px 0 8px;
+        }
+        .comp-result {
+            font-size: 1.4rem;
+        }
+    }
+    .pad{
+        float: left;
+        width: 100%;
+        color: #fff;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .buttons {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+        .long-btn {
+            display: grid;
+            grid-template-columns: 75% 25%;
+        }
+        span {
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(36, 137, 179, 0.21176470588235294);
+            cursor: pointer;
+            border-bottom: none;
+            border-left: none;
+            min-height: 50px;
+        }
+        span:foucs {
+            background: #3689a9;
+        }
+        span:nth-child(4n + 4) {
+            border-right: none;
+        }
+    }
+}

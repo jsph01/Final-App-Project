@@ -1,0 +1,38 @@
+<ion-content class="calc-app">
+    <div class="header">
+        <ion-label>Calculator</ion-label>
+        <ion-icon name="more"></ion-icon>
+    </div>
+    <div class="result-screen">
+        <ion-input type="text" autofocus #input class="live-vals" value="{{calcView}}"></ion-input>
+        <span class="comp-result">{{resultView}}</span>
+    </div>
+    <div class="pad">
+      <div class="buttons">
+          <span (click)="geoFunc('sin')">SIN</span>
+          <span (click)="geoFunc('cos')">COS</span>
+          <span (click)="geoFunc('tan')">TAN</span>
+          <span (click)="geoFunc('c-tan')">COT</span>
+          <span (click)="ac()">AC</span>
+          <span (click)="stepBack()"><ion-icon name="undo"></ion-icon></span>
+          <span (click)="addOperator('+')"><ion-icon name="add"></ion-icon></span>
+          <span (click)="addOperator('-')"><ion-icon name="remove"></ion-icon></span>
+          <span (click)="addValue('7')">7</span>
+          <span (click)="addValue('8')">8</span>
+          <span (click)="addValue('9')">9</span>
+          <span  (click)="addOperator('x')"><ion-icon name="close"></ion-icon></span>
+          <span (click)="addValue('4')">4</span>
+          <span (click)="addValue('5')">5</span>
+          <span (click)="addValue('6')">6</span>
+          <span (click)="addOperator('/')">/</span>
+          <span (click)="addValue('1')">1</span>
+          <span (click)="addValue('2')">2</span>
+          <span (click)="addValue('3')">3</span>
+          <span (click)="stackCurrentView()">=</span>
+        </div>
+        <div class="long-btn">
+          <span (click)="addValue('0')">0</span>
+          <span (click)="addValue('.')">.</span>
+        </div>
+    </div>
+</ion-content>
